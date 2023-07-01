@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git credentialsId: 'sethaa', url: 'https://github.com/uggerakeshvarma/sethaa.git'
+            }
+        }
+    }
+}
